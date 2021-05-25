@@ -1,9 +1,15 @@
 
 #editor {
-  height: 90vh;
-  border-style: solid;
+  background-color: #292d3e;
 }
 #previewer {
-  height: 90vh;
-  border-style: solid;
+  background-color: #292d3e;
+}
+#form-editor {
+  height: 85vh;
+  background-color: #292d3e;
+}
+
+.head {
+  background-color: #14213d;
 }
