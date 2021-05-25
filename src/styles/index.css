@@ -30,3 +30,7 @@
   padding: 6px 10px;
   border-radius: 3px;
 }
+
+.page-not-found {
+  height:100vh;
+}

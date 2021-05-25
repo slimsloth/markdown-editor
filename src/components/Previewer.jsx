@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import Head from "./Head";
 
 const Previewer = (props) => {
+  const [previewText, setPreviewText] = useState("");
+
+  useEffect(() => {
+    setPreviewText(props.previewText);
+  }, [props.previewText]);
 
   return (
     <div id="previewer">
@@ -13,9 +18,8 @@ const Previewer = (props) => {
           id="form-editor"
           className="text-white"
           readOnly={true}
-          defaultValue={props.previewText}
-        >
-        </Form.Control>
+          defaultValue={previewText}
+        ></Form.Control>
       </Form>
     </div>
   );

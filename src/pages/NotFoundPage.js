@@ -1,8 +1,14 @@
 import React from 'react';
+import Container from "react-bootstrap/Container";
 
 const NotFoundPage = () => {
     return (
-        <div>404 not found!</div>
+        <Container>
+            <div className="border page-not-found d-flex flex-column justify-content-center align-items-center">
+                <h1 className="display-1 ">404</h1>
+                <p className="">Page not found!</p>
+            </div>
+        </Container>
     )
 }
 

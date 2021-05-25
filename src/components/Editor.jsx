@@ -13,6 +13,7 @@ const Editor = (props) => {
           id="form-editor"
           className="text-white"
           onChange={(e)=>props.handleChange(e)}
+          value={props.editorText}
         ></Form.Control>
       </Form>
     </div>

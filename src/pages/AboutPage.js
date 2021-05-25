@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+
 
 const AboutPage = () => {
   const [data, setData] = useState(null);
@@ -31,7 +30,7 @@ const AboutPage = () => {
         ></Image>
       </div>
       <p className="lead text-center">Created by Sean Mitchell</p>
-      <p className="text-center font-weight-lighter">Simply type your markdown into the editor window. The preview window will automatically display your markdown.</p>
+      <p className="text-center font-weight-lighter">Simply type your markdown into the editor window. The preview window will automatically display your markdown in real-time.</p>
       <h1>Syntax Guide</h1>
       <h3>Headers</h3>
       <div className="code-example">
