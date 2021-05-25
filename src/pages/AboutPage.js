@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const AboutPage = () => {
   const [data, setData] = useState(null);
@@ -18,62 +21,95 @@ const AboutPage = () => {
   if (!data) return null;
   return (
     <Container>
-      <h1>Author </h1>
-      <img alt={data.login} src={data.avatar_url}></img>
-      <p>Created by Sean Mitchell</p>
+      <h1 className="display-4 text-center">Real-Time Markdown Previewer</h1>
+      <div className="author-section">
+        <Image
+          alt={data.login}
+          src={data.avatar_url}
+          roundedCircle
+          className="align-self-center"
+        ></Image>
+      </div>
+      <p className="lead text-center">Created by Sean Mitchell</p>
+      <p className="text-center font-weight-lighter">Simply type your markdown into the editor window. The preview window will automatically display your markdown.</p>
       <h1>Syntax Guide</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue
-        nunc, vestibulum vitae sapien ultrices, pulvinar tincidunt velit.
-        Vestibulum ligula libero, finibus et vulputate non, sagittis id nulla.
-        Etiam luctus tincidunt lorem, non egestas est semper tempor. Praesent
-        eget enim ultrices, accumsan nibh nec, euismod ipsum. Nullam sagittis
-        ultricies velit, eget maximus turpis laoreet sodales. Nam ac justo nisi.
-        Proin dignissim quam non mi varius consequat. Sed eu turpis quis magna
-        vehicula facilisis ut vitae justo. Sed iaculis lorem urna, id tincidunt
-        mauris pretium eget. Ut luctus nisl non rhoncus hendrerit. Nunc commodo
-        at nulla a imperdiet. Duis eu ultrices velit. Ut dignissim rutrum neque.
-        Aenean bibendum, ante quis interdum dictum, justo metus lacinia arcu, ut
-        commodo lacus nibh vitae felis. Quisque faucibus consectetur magna, vel
-        efficitur massa pretium sit amet. Etiam lacinia sagittis magna, nec
-        imperdiet ex. Donec at nulla non dolor gravida ultricies. Ut ipsum
-        turpis, vehicula nec efficitur dignissim, interdum sit amet ante. Donec
-        ultrices dui eu purus aliquam laoreet. Nunc sit amet porta tellus.
-        Suspendisse potenti. Integer semper vulputate felis eu molestie. Quisque
-        ornare mi quis faucibus mattis. Suspendisse sollicitudin tincidunt ex at
-        porttitor. Integer mollis est sed orci accumsan, quis luctus eros
-        ultricies. Praesent consequat consequat justo eu porta. Mauris
-        sollicitudin felis elementum justo facilisis faucibus. Curabitur
-        pulvinar efficitur porttitor. Vestibulum porta rutrum rutrum. In nulla
-        enim, imperdiet quis molestie ac, faucibus a lectus. Aenean ipsum arcu,
-        ullamcorper eget enim a, venenatis dictum risus. Suspendisse nunc sem,
-        rutrum vitae congue ac, fringilla vitae elit. Donec ultrices, arcu at
-        imperdiet faucibus, elit lorem fermentum magna, id consequat neque nisl
-        et nisl. Suspendisse potenti. Cras eu risus quam. Mauris quis fermentum
-        erat. Curabitur egestas nunc risus, a pulvinar enim pellentesque sit
-        amet. Vivamus sit amet ipsum nibh. Proin eros lacus, malesuada quis
-        ligula sed, placerat consectetur felis. Aliquam bibendum leo ut sagittis
-        dapibus. Maecenas nec aliquam tortor, et porta dolor. Cras cursus
-        molestie pharetra. Quisque sed mattis nisi. Donec convallis posuere
-        eros, et luctus velit laoreet non. Nulla aliquet scelerisque lorem a
-        dignissim. Ut malesuada vel ante eu finibus. Nulla volutpat massa eu
-        congue volutpat. In hac habitasse platea dictumst. Maecenas porttitor
-        ipsum quis nulla dapibus, molestie sollicitudin est aliquet. Quisque
-        auctor sem consequat lacus vestibulum, ac vestibulum metus imperdiet. In
-        auctor suscipit leo eu fermentum. Nulla ultrices augue et odio mattis
-        iaculis sed at purus. Etiam et ex sed mauris ornare hendrerit et rhoncus
-        dolor. Curabitur lobortis at nisl quis sodales. Nam blandit sagittis
-        dolor nec consectetur. Sed consequat finibus lorem ac volutpat.
-        Pellentesque ut massa non urna finibus feugiat. Morbi interdum est
-        lacus, at tempor ante porta vel. Donec turpis lorem, sagittis ut semper
-        id, placerat quis quam. Ut sagittis, orci eu aliquet volutpat, purus
-        orci vestibulum neque, ac convallis arcu quam vestibulum magna.
-        Suspendisse potenti. Vivamus odio lacus, consequat in lacinia quis,
-        egestas suscipit tellus. Mauris auctor justo non mollis accumsan. Duis
-        rutrum, dui nec iaculis sodales, orci lectus egestas enim, et
-        ullamcorper tortor eros sit amet metus. Mauris at urna luctus, suscipit
-        mi in, viverra purus.
-      </p>
+      <h3>Headers</h3>
+      <div className="code-example">
+        <code className="text-white">
+          # This is an &lt;h1&gt; tag
+          <br />
+          ## This is an &lt;h2&gt; tag
+          <br />
+          ###### This is an &lt;h6&gt; tag
+          <br />
+        </code>
+      </div>
+
+      <h3>Emphasis</h3>
+      <div className="code-example">
+        <code className="text-white">
+          *This text will be italic*
+          <br />
+          _This will also be italic_
+          <br />
+          <br />
+          **This text will be bold**
+          <br />
+          __This will also be bold__
+          <br />
+          _You **can** combine them_
+          <br />
+        </code>
+      </div>
+      <h3>Lists</h3>
+      <h4>Unordered</h4>
+      <div className="code-example">
+        <code className="text-white">
+          * Item 1 <br />
+          * Item 2 <br />
+          &emsp;* Item 2a <br />
+          &emsp;* Item 2b <br />
+        </code>
+      </div>
+      <h4>Ordered</h4>
+      <div className="code-example">
+        <code className="text-white">
+          1. Item 1 1. Item 2 <br />
+          1. Item 3 <br />
+          &emsp;1. Item 3a <br />
+          &emsp;1. Item 3b <br />
+        </code>
+      </div>
+      <h3>Images</h3>
+      <div className="code-example">
+        <code className="text-white">
+          ![GitHub Logo](/images/logo.png)
+          <br /> Format: ![Alt Text](url)
+        </code>
+      </div>
+      <h3>Links</h3>
+      <div className="code-example">
+        <code className="text-white">
+          http://github.com - automatic! <br />
+          [GitHub](http://github.com)
+        </code>
+      </div>
+      <h3>Blockquotes</h3>
+      <div className="code-example">
+        <code className="text-white">
+          As Kanye West said: <br />
+          <br />
+          &gt; We're living the future so <br />
+          &gt; the present is our past.
+        </code>
+      </div>
+      <h3>Inline code</h3>
+      <div className="code-example">
+        <code className="text-white">
+          I think you should use an <br />
+          `&lt;addr&gt;` element here instead.
+        </code>
+      </div>
     </Container>
   );
 };
