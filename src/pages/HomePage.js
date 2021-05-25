@@ -1,8 +1,9 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
 
 const HomePage = () => {
     return (
-        <div>This is the Home Page!</div>
+        <Container fluid="true">This is the Home Page!</Container>
     )
 }
 
