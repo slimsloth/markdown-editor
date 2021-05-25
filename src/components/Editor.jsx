@@ -1,8 +1,10 @@
 import React from 'react';
+import Head from './Head';
+
 
 const Editor = () => {
     return (
-        <div>I'm the editor</div>
+        <div id="editor"><Head title="Editor"/></div>
     )
 }
 
