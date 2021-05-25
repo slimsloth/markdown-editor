@@ -8,7 +8,7 @@ import { BiEdit } from "react-icons/bi";
 const NavigationBar = () => {
   return (
     <Container fluid="true">
-      <Navbar variant="dark" bg="dark" expand="lg">
+      <Navbar variant="dark" expand="lg" className="Navbar">
         <Navbar.Brand>
           <BiEdit className="mr-2" />
           <Link to="/" className="text-light">

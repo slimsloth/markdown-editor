@@ -7,9 +7,12 @@
 }
 #form-editor {
   height: 85vh;
-  background-color: #292d3e;
+  background-color: #0d1117;
+}
+.Navbar {
+  background-color: #161b22;
 }
 
 .head {
-  background-color: #14213d;
+  background-color: #0d1117;
 }

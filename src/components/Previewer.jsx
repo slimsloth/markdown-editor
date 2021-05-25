@@ -12,8 +12,8 @@ const Previewer = (props) => {
           as="textarea"
           id="form-editor"
           className="text-white"
-          readonly="true"
-          value={props.previewText}
+          readOnly={true}
+          defaultValue={props.previewText}
         >
         </Form.Control>
       </Form>
