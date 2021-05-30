@@ -16,10 +16,10 @@ function App() {
     <Router>
       <NavigationBar/>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/markdown-editor">
         <HomePage handleChange={handleChange} text={text}/>
         </Route>
-        <Route path="/about">
+        <Route path="/markdown-editor/about">
           <AboutPage/>
         </Route>
         <Route>

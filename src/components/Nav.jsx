@@ -11,7 +11,7 @@ const NavigationBar = () => {
       <Navbar variant="dark" expand="lg" className="Navbar">
         <Navbar.Brand>
           <BiEdit className="mr-2" />
-          <Link to="/" className="text-light">
+          <Link to="/markdown-editor/" className="text-light">
             Markdown Editor
           </Link>
         </Navbar.Brand>
@@ -19,12 +19,12 @@ const NavigationBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link>
-              <Link to="/" className="text-light">
+              <Link to="/markdown-editor/" className="text-light">
                 Home
               </Link>
             </Nav.Link>
             <Nav.Link>
-              <Link to="/about" className="text-light">
+              <Link to="/markdown-editor/about" className="text-light">
                 About
               </Link>
             </Nav.Link>
