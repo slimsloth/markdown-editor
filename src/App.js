@@ -29,48 +29,49 @@ function App() {
     </Router>
   );
 }
-const defaultText=`# Welcome to my React Markdown Previewer!
+const defaultText=`# Real-time Markdown Previewer
 
-## This is a sub-heading...
-### And here's some other cool stuff:
+## This is an h2 heading
+### This is an h3 heading
 
-Heres some code, \`<div></div>\`, between 2 backticks.
+You can insert code \`<div></div>\` with 2 backticks.
 
 \`\`\`
-// this is multi-line code:
+// This is a code block:
 
-function anotherExample(firstLine, lastLine) {
-  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
-    return multiLineCode;
+function beepBoop(beep) {
+  if (beep) {
+    return boop;
   }
 }
 \`\`\`
 
-You can also make text **bold**... whoa!
-Or _italic_.
-Or... wait for it... **_both!_**
-And feel free to go crazy ~~crossing stuff out~~.
+You can insert **bold** text
+or _italic_ text.
+You can even do **_bold and italic text_**.
+This is an example of ~~strike through text~~.
 
-There's also [links](https://www.freecodecamp.com), and
+Here is an example of a [link](https://www.reddit.com/r/TVTooHigh/), and
 > Block Quotes!
 
-And if you want to get really crazy, even tables:
+Here is an example of a table:
 
-Wild Header | Crazy Header | Another Header?
+Header 1 | Header 2 | Header 3
 ------------ | ------------- | -------------
-Your content can | be here, and it | can be here....
-And here. | Okay. | I think we get it.
+Row content | Row Content | Row Content
+Row Content | Row Content | Row Content
 
-- And of course there are lists.
-  - Some are bulleted.
-     - With different indentation levels.
-        - That look like this.
+- Here is a list.
+  - You can
+     - Keep indenting
+        - The list.
 
 
-1. And there are numbererd lists too.
-1. Use just 1s if you want!
-1. And last but not least, let's not forget embedded images:
+1. This is
+1. a numbered
+1. list.
 
+And lastly, here is an example of an embedded picture:
 ![hide the pain](https://i.imgur.com/iojvSeD.jpg)`
 
 export default App;
