@@ -1,27 +1,31 @@
 import React, { useState, useEffect } from "react";
-import marked from 'marked';
-import Form from "react-bootstrap/Form";
+import marked from "marked";
+import dompurify from "dompurify";
+import Form from 'react-bootstrap/Form';
+import Container from "react-bootstrap/Container";
 import Head from "./Head";
 
 const Previewer = (props) => {
   const [previewText, setPreviewText] = useState("");
 
   useEffect(() => {
-    setPreviewText(marked(props.previewText));
+    setPreviewText(marked(dompurify.sanitize(props.previewText)));
+    console.log(previewText);
   }, [props.previewText]);
+
+  function createMarkup() {
+    return { __html: previewText };
+  }
 
   return (
     <div id="previewer">
       <Head title="Previewer" id="previewer" />
-      <Form>
-        <Form.Control
-          as="textarea"
-          id="form-editor"
-          className="text-white"
-          readOnly={true}
-          defaultValue={previewText}
-        ></Form.Control>
-      </Form>
+        <Container
+          className="text-white form-control overflow-auto"
+          id="form-previewer"
+          dangerouslySetInnerHTML={createMarkup()}
+          fluid
+        />
     </div>
   );
 };
