@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import marked from 'marked';
 import Form from "react-bootstrap/Form";
 import Head from "./Head";
 
@@ -6,7 +7,7 @@ const Previewer = (props) => {
   const [previewText, setPreviewText] = useState("");
 
   useEffect(() => {
-    setPreviewText(props.previewText);
+    setPreviewText(marked(props.previewText));
   }, [props.previewText]);
 
   return (
