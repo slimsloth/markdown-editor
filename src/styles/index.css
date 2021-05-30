@@ -17,9 +17,8 @@
   background-color: #0d1117;
   border-style: none;
 }
-.author-section {
-  display: flex;
-  justify-content: center;
+#git-logo {
+  width: 500px;
 }
 .Navbar {
   background-color: #161b22;

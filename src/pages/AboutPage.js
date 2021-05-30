@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 
-
 const AboutPage = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(null);
@@ -21,16 +20,21 @@ const AboutPage = () => {
   return (
     <Container>
       <h1 className="display-4 text-center">Real-Time Markdown Previewer</h1>
-      <div className="author-section">
+      <div className="d-flex flex-column align-items-center">
         <Image
           alt={data.login}
           src={data.avatar_url}
           roundedCircle
           className="align-self-center"
         ></Image>
+        <p className="lead">
+          Created by Sean Mitchell
+        </p>
       </div>
-      <p className="lead text-center">Created by Sean Mitchell</p>
-      <p className="text-center font-weight-lighter">Simply type your markdown into the editor window. The preview window will automatically display your markdown in real-time.</p>
+      <p className="text-center font-weight-lighter">
+        Simply type your markdown into the editor window. The preview window
+        will automatically display your markdown in real-time.
+      </p>
       <h1>Syntax Guide</h1>
       <h3>Headers</h3>
       <div className="code-example">
