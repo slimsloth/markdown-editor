@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import NavigationBar from "./components/Nav";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -16,10 +16,10 @@ function App() {
     <Router>
       <NavigationBar/>
       <Switch>
-        <Route exact path="/markdown-editor/">
+        <Route exact path="/">
         <HomePage handleChange={handleChange} text={text}/>
         </Route>
-        <Route path="/markdown-editor/about">
+        <Route path="/about">
           <AboutPage/>
         </Route>
         <Route>

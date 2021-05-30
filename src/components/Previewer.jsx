@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import marked from "marked";
 import dompurify from "dompurify";
-import Form from 'react-bootstrap/Form';
 import Container from "react-bootstrap/Container";
 import Head from "./Head";
 
@@ -10,7 +9,6 @@ const Previewer = (props) => {
 
   useEffect(() => {
     setPreviewText(marked(dompurify.sanitize(props.previewText)));
-    console.log(previewText);
   }, [props.previewText]);
 
   function createMarkup() {
