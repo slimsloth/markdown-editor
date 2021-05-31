@@ -30,7 +30,6 @@ function App() {
   );
 }
 const defaultText=`# Real-time Markdown Previewer
-
 ## This is an h2 heading
 ### This is an h3 heading
 
@@ -46,13 +45,13 @@ function beepBoop(beep) {
 }
 \`\`\`
 
-You can insert **bold** text
-or _italic_ text.
+You can insert **bold** text or _italic_ text.
+
 You can even do **_bold and italic text_**.
+
 This is an example of ~~strike through text~~.
 
-Here is an example of a [link](https://www.reddit.com/r/TVTooHigh/), and
-> Block Quotes!
+Here is an example of a [link](https://www.reddit.com/r/TVTooHigh/).
 
 Here is an example of a table:
 
@@ -72,6 +71,7 @@ Row Content | Row Content | Row Content
 1. list.
 
 And lastly, here is an example of an embedded picture:
+
 ![hide the pain](https://i.imgur.com/iojvSeD.jpg)`
 
 export default App;
