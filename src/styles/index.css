@@ -1,3 +1,5 @@
+
+
 #editor {
   background-color: #292d3e;
   border:solid 1px;
@@ -7,18 +9,16 @@
   border:solid 1px;
 }
 #form-editor {
-  height: 100vh;
+  height: 85vh;
   background-color: #0d1117;
   -webkit-box-shadow: none;
   border-style: none;
+  resize: none;
 }
 #form-previewer {
-  height: 100vh;
+  height: 85vh;
   background-color: #0d1117;
   border-style: none;
-}
-#git-logo {
-  width: 500px;
 }
 .Navbar {
   background-color: #161b22;
@@ -57,4 +57,32 @@ th {
   border: 2px solid #fff;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #424242;        /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #686868;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #424242;  /* creates padding around scroll thumb */
+}
+
+.flex-grow {
+  flex: 1 0 auto;
+}
+
+textarea {
+  resize: none;
+}
+
+#container-footer {
+  height: 7vh;
+  background-color: #161b22;
 }

@@ -17,7 +17,7 @@ function App() {
       <NavigationBar/>
       <Switch>
         <Route exact path="/">
-        <HomePage handleChange={handleChange} text={text}/>
+        <HomePage handleChange={handleChange} text={text} className="home-page"/>
         </Route>
         <Route path="/about">
           <AboutPage/>

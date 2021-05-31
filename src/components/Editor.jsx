@@ -6,8 +6,8 @@ const Editor = (props) => {
 
   return (
     <div id="editor">
-      <Head title="Editor" />
-      <Form>
+      <Head title="Editor"/>
+      <Form className="d-flex flex-column">
         <Form.Control
           as="textarea"
           id="form-editor"
