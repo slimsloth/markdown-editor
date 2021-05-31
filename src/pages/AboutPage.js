@@ -18,7 +18,7 @@ const AboutPage = () => {
   if (error) return <pre>{JSON.stringify(error, null, 2)}</pre>;
   if (!data) return null;
   return (
-    <Container>
+    <Container className="mb-4">
       <h1 className="display-4 text-center">Real-Time Markdown Previewer</h1>
       <div className="d-flex flex-column align-items-center">
         <Image
